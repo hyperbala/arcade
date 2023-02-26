@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Mini Games</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        ul {
+            display: none;
+            height: min-content;
+            width: min-content;
+            list-style: none;
+        }
+        
+
+        ol {
+            display: inline;
+            height: min-content;
+            width: 20px;
+        }
+
+        li#h {
+            display: inline;
+            font-weight: bolder;
+        }
+
+        ol:hover ul {
+            position: relative;
+            display: inline;
+        }
+
+        div.help {
+            position: absolute;
+            top: 64px;
+            left: 1164px;
+        }
+        b.help {
+            font-size: x-large;
+
+            color: rgb(255, 0, 0);
+        }
+    </style>
+    <script src="script.js"></script>
+</head>
+<body class="wam">
+    <h1 class="wam">Whack A Mole</h1>
+    <a href="index.html"><img src="homebt.png"  class="home"></a>
+    <b id="t">Time left :30</b>
+    <div class="help">
+        <ol>
+            <li id="h"><b class="help">?</b>
+                <ul>
+                    <li class="in">Whack the mole</li>
+                    <li class="in">Hit it properly to score a point</li>
+                </ul>
+            </li>
+
+        </ol>
+    </div>
+    <div  class="wam">
+    <table>
+        <button onclick="start()" class="wstart">Start</button>
+        <tr>
+            <td><button id="1" class="wam"></button></td>            
+            <td><button id="2" class="wam"></button></td>            
+            <td><button id="3" class="wam"></button></td>            
+            <td><button id="4" class="wam"></button></td>            
+            <td><button id="5" class="wam"></button></td>            
+        </tr>
+        <tr>
+            <td><button id="6" class="wam"></button></td>            
+            <td><button id="7" class="wam"></button></td>            
+            <td><button id="8" class="wam"></button></td>
+            <td><button id="9" class="wam"></button></td>
+            <td><button id="10" class="wam"></button></td>            
+        </tr>
+        <tr>
+            <td><button id="11" class="wam"></button></td>
+            <td><button id="12" class="wam"></button></td>
+            <td><button id="13" class="wam"></button></td>
+            <td><button id="14" class="wam"></button></td>
+            <td><button id="15" class="wam"></button></td>
+        </tr>
+        <tr>
+            <td><button id="16" class="wam"></button></td>
+            <td><button id="17" class="wam"></button></td>
+            <td><button id="18" class="wam"></button></td>
+            <td><button id="19" class="wam"></button></td>
+            <td><button id="20" class="wam"></button></td>
+        </tr>
+        <tr>
+            <td><button id="21" class="wam"></button></td>            
+            <td><button id="22" class="wam"></button></td>            
+            <td><button id="23" class="wam"></button></td>
+            <td><button id="24" class="wam"></button></td>            
+            <td><button id="25" class="wam"></button></td>            
+        </tr>
+        <button onclick="restart()" class="wstart" style="position: relative; top: 464px; left: 120px;background-color: rgb(14, 255, 130);">Reset</button>
+    </table>
+    <b id="sc" class="wam">Score:0</b>
+    </div>  
+</body>
+</html>

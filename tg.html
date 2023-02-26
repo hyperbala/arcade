@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" id="body">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Games</title>
+    <link rel="stylesheet" href="style.css">
+    <script lang="javascript" src="script.js"></script>
+    <style>
+        ul {
+            display: none;
+            height: min-content;
+            width: min-content;
+            list-style: none;
+        }
+        
+
+        ol {
+            display: inline;
+            height: min-content;
+            width: 20px;
+        }
+
+        li#h {
+            display: inline;
+            font-weight: bolder;
+            color: azure;
+        }
+
+        ol:hover ul {
+            position: relative;
+            display: inline;
+        }
+
+        div.help {
+            position: absolute;
+            top: 104px;
+            left: 964px;
+        }
+        b.help {
+            font-size: x-large;
+
+            color: rgb(255, 0, 0);
+        }
+    </style>
+</head>
+<body class="temp">
+    
+    <header>
+        <h1 class="temp">오징어 게임</h1>
+        <h2 class="temp">Tampered Glass</h2>
+        <a href="index.html"><img src="homebt.png"  class="home"></a>
+    </header>
+    <div class="help">
+        <ol>
+            <li id="h"><b class="help">?</b>
+                <ul>
+                    <li class="in">One of the bridge is fake in each pair</li>
+                    <li class="in">Cross the bridge to win</li>
+                </ul>
+            </li>
+
+        </ol>
+    </div>
+    <img class="tg1" src="tg.png" alt="">
+    <img class="tg2" src="tg.png" alt="">
+    <table class="temp">
+        <tr>
+            <td colspan="2"><button style="width: 124;" class="entry" id="101" onclick="wintg()"></button></td>
+        </tr>
+        <tr>
+            <td id="6a"><button id="51" onclick="walk(51)" class="temp"></button></td>
+            <td id="6b"><button id="52" onclick="walk(52)" class="temp"></button></td>
+        </tr>
+        <tr>
+            <td id="5a"><button id="41" onclick="walk(41)" class="temp"></button></td>
+            <td id="5b"><button id="42" onclick="walk(42)" class="temp"></button></td>
+        </tr>
+        <tr>
+            <td id="4a"><button id="31" onclick="walk(31)" class="temp"></button></td>
+            <td id="4b"><button id="32" onclick="walk(32)" class="temp"></button></td>
+        </tr>
+        <tr>
+            <td id="3a"><button id="21" onclick="walk(21)" class="temp"></button></td>
+            <td id="3b"><button id="22" onclick="walk(22)" class="temp"></button></td>
+        </tr>
+        <tr>
+            <td id="2a"><button id="11" onclick="walk(11)" class="temp"></button></td>
+            <td id="2b"><button id="12" onclick="walk(12)" class="temp"></button></td>
+        </tr>
+        <tr>
+            <td id="1a"><button id="1" onclick="walk(1)" class="temp"></button></td>
+            <td id="1b"><button id="2" onclick="walk(2)" class="temp"></button></td>
+        </tr>
+        <tr>
+            <td colspan="2"><button style="width: 120;" class="entry" id="100"><img src="tgchar.png" id="char"></button></td>
+        </tr>
+    </table>
+</body>
+</html>

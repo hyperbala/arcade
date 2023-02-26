@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <script lang="javascript">
+        var arr=['<img src="strawberry.png" id="char">','<img src="apple.png" id="char">','<img src="watermel.png" id="char">','<img src="orange.png" id="char">','<img src="grape.png" id="char">','<img src="cherry.png" id="char">'];
+        var gamingArr=[];
+        var timer,time;
+        var gaming=0;
+        var running=0;
+        var canClick=1;
+        var score=0;
+        var stopTic=0;
+        var started=0;
+        var j=0;
+        var game=0;
+        function show(){
+            if(score==0){
+                timer = setInterval(reveal, 1000);
+            }
+        }
+        time=0;
+        function reveal(){
+            if(time<=2){
+                for (var i = 0; i < 6; i++) {
+                    document.getElementById(i+1+'a').innerHTML = arr[i];
+                    document.getElementById(i+1+'b').innerHTML = arr[i];
+                }
+            }
+            else{
+                for (var i = 0; i < 6; i++) {
+                    document.getElementById(i+1+'a').innerHTML = "";
+                    document.getElementById(i+1+'b').innerHTML = "";
+                }
+                clearInterval(timer);
+            }
+            time+=1;
+        }
+        count=0,prev=0,cur=0;
+        var t;
+
+        function games(r){
+            if (canClick==0) {
+                return;
+            }
+            if (started==0) {
+                return;
+            }
+            if(r=="1a" || r=="1b"){
+                document.getElementById(r).innerHTML = '<img src="strawberry.png" id="char">';
+            }
+            else if(r=="2a" || r=="2b"){
+                document.getElementById(r).innerHTML = '<img src="apple.png" id="char">';
+            }
+            else if(r=="3a" || r=="3b"){
+                document.getElementById(r).innerHTML = '<img src="watermel.png" id="char">';
+            }
+            else if(r=="4a" || r=="4b"){
+                document.getElementById(r).innerHTML = '<img src="orange.png" id="char">';
+            }
+            else if(r=="5a" || r=="5b"){
+                document.getElementById(r).innerHTML = '<img src="grape.png" id="char">';
+            }
+            else if(r=="6a" || r=="6b"){
+                document.getElementById(r).innerHTML = '<img src="cherry.png" id="char">';
+            }
+            cur=r;
+            count++;
+            if (count==2) {
+                if(document.getElementById(prev).className==document.getElementById(cur).className){
+                    score++;
+                    document.getElementById('sc').innerHTML="Score:"+score;
+                    canClick=1;
+                    count=0;
+                    if(score==6){
+                        stopTic=1;
+                        window.location.reload(false);
+                        window.location.href="win.html"
+                    }
+                    return;
+                }
+                else{
+                    timeToRemove();
+                }
+                canClick=0;
+                count=0;
+            }
+            if(running==0){
+                prev=r;
+            }
+            if(count==0){
+                running=0;
+            }
+        }
+
+        function timeToRemove(){
+            if(prev!=0){
+                running=1;
+                t=setTimeout(remove,1200)
+            }
+        }
+
+        function remove(){
+            
+            document.getElementById(prev).innerHTML="";
+            running=0;
+            document.getElementById(cur).innerHTML="";
+            canClick=1;
+            clearTimeout(t);
+        }
+
+        function startMatchGame(){
+            if(started==1){
+                return;
+            }
+            time=0;
+            started=1;
+            const interval = setInterval(gameTimer, 1000);
+            function gameTimer(){
+                if(time>29){
+                    clearInterval(interval);
+                    window.location.reload(false);
+                    window.location.href="warning.html";
+                    return
+                }
+                if(stopTic==1){
+                    clearInterval(interval);
+                }
+                document.getElementById("tim").innerHTML="Time left :"+(29-time);
+                time+=1;
+            }
+        }
+    </script>
+    <style>
+        button{
+            background-color: rgb(54, 255, 218);
+        }
+        body {
+            background-color: rgb(132, 0, 255);
+            background-image: url(bgmem.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        h1 {
+            text-align: center;
+            /* color: rgb(247, 81, 15) */
+            color: rgb(0, 13, 255);
+            text-shadow: 3px 3px 10px rgb(255, 132, 0);
+            font-size: 50px;
+        }
+        h1.main{
+            text-align: center;
+            display: inline;
+            margin: 0px;
+            position: fixed;
+            left: 610px;
+            top: 0px;
+            font-size: 60px;
+        }
+
+        div#main {
+            position: absolute;
+            top: 120px;
+            left: 600px;
+            text-align: center;
+            height: 290px;
+        }
+
+        button {
+            height: 80px;
+            width: 80px;
+            font-size: xx-large;
+        }
+
+        button.sho {
+            position: relative;
+            top: 3px;
+            background-color: rgb(0, 253, 139);
+        }
+
+        b#tim {
+            position: relative;
+            top: 122px;
+            left: 1px;
+            font-size: xx-large;
+            background-color: aquamarine;
+        }
+
+        button#gtimer {
+            height: 32px;
+            width: 57px;
+            font-size: large;
+            position: relative;
+            top: -27px;
+            left: 55px;
+            background-color: rgb(255, 140, 0);
+        }
+
+        b#sc {
+            display: inline;
+            background-color: peachpuff;
+            position: relative;
+            top: 34px;
+            left: -27px;
+            font-size: xx-large;
+        }
+
+        ul {
+            display: none;
+            height: min-content;
+            width: min-content;
+            list-style: disc;
+        }
+        
+
+        ol {
+            display: inline;
+            height: min-content;
+            width: 20px;
+        }
+
+        li#h {
+            display: inline;
+            color: black;
+            font-weight: bolder;
+        }
+
+        ol:hover ul {
+            display: inline;
+        }
+
+        div.help {
+            position: absolute;
+            top: 64px;
+            left: 964px;
+        }
+
+        b.help {
+            font-size: x-large;
+
+            color: rgb(255, 0, 0);
+        }
+        img.temp{
+            height: 40px;
+            width: 40px;
+            margin: auto;
+            position: fixed;
+            left: 15px;
+            top: 15px;
+        }
+        #char{
+            height: 50px;
+            width: 40px;
+        }
+    </style>
+</head>
+
+<body onload="games()">
+
+    <header>
+        <h1>Memory Game</h1>
+        <a href="index.html"><img src="homebt.png"  class="temp"></a>
+    </header>
+    <div class="help">
+        <ol>
+            <li id="h"><b class="help">?</b>
+                <ul>
+                    <li class="in">There are 6 pairs of images</li>
+                    <li class="in">You will be awarded 1 score point<br>for matching each pair</li>
+                    <li class="in">You can only use Show button once</li>
+                    <li class="in">You can't use show if you have <br>atleast 1 score point</li>
+                </ul>
+            </li>
+
+        </ol>
+    </div>
+    <div id="main">
+        <table>
+            <tr>
+                <td><button id="1a" class='1' onclick="games('1a')"></button></td>
+                <td><button id="2b" class='2' onclick="games('2b')"></button></td>
+                <td><button id="3a" class='3' onclick="games('3a')"></button></td>
+                <td><button id="6b" class='6' onclick="games('6b')"></button></td>
+            </tr>
+            <tr>
+                <td><button id="4a" class='4' onclick="games('4a')"></button></td>
+                <td><button id="5b" class='5' onclick="games('5b')"></button></td>
+                <td><button id="6a" class='6' onclick="games('6a')"></button></td>
+                <td><button id="1b" class='1' onclick="games('1b')"></button></td>
+            </tr>
+            <tr>
+                <td><button id="4b" class='4' onclick="games('4b')"></button></td>
+                <td><button id="3b" class='3' onclick="games('3b')"></button></td>
+                <td><button id="5a" class='5' onclick="games('5a')"></button></td>
+                <td><button id="2a" class='2' onclick="games('2a')"></button></td>
+            </tr>
+        </table>
+        <button class="sho" onclick="show()" style="font-size: small; height: 20px; width: 50px;">Show</button>
+        <br>
+        <b id="tim">Time left:30</b>
+        <br>
+        <button onclick="startMatchGame()" id="gtimer">start</button>
+        <b id="sc">Score:0</b>
+    </div>
+
+</body>
+
+</html>

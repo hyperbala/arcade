@@ -1,0 +1,337 @@
+header{
+    position: absolute;
+    top: 40px;
+}
+body.main{
+    background-image: url(201102-arcade-wallpaper.jpg);
+    background-repeat: no-repeat;
+    background-size: 1536px 763px;
+}
+img.index:hover{
+    transform: scale(1.2);
+}
+
+h1.main{
+    text-align: center;
+    display: inline;
+    margin: 0px;
+    position: fixed;
+    left: 610px;
+    top: 0px;
+    font-size: 70px;
+    color: rgb(255, 0, 0);
+    text-shadow: 3px 3px 10px rgb(183, 0, 255);
+    filter:  brightness(90%);
+}
+
+div.d1{
+    display: inline-block;
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    top: 221px;
+    left: 135px;
+    z-index: 0;
+    text-align: center;
+    color: rgb(255, 0, 17);
+    font-weight: bolder;
+    text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
+               1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+
+}
+
+div.d2{
+    display: inline-block;
+    height: 160px;
+    width: 160px;
+    position: absolute;
+    top: 221px;
+    left: 487px;
+    text-align: center;
+    color: rgb(255, 0, 17);
+    font-weight: bolder;
+    text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
+               1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+}
+div.d3{
+    display: inline-block;
+    height: 160px;
+    width: 160px;
+    position: absolute;
+    top: 221px;
+    right: 176px;
+    text-align: center;
+    color: rgb(255, 0, 17);
+    font-weight: bolder;
+    text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
+               1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+}
+div.d4{
+    display: inline-block;
+    height: 160px;
+    width: 160px;
+    position: absolute;
+    top: 221px;
+    left: 832px;
+    text-align: center;
+    color: rgb(255, 0, 17);
+    font-weight: bolder;
+    text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
+               1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+}
+img.index{
+    height: 180px;
+    width: 180px;
+    filter: brightness(94%);
+    transition: 1s;
+    border: 3px solid black;
+    border-radius: 20px;
+}
+img.i{
+    height: 40px;
+    width: 40px;
+    margin: auto;
+    position: fixed;
+    left: 15px;
+    top: 15px;
+}
+img.nav{
+    height:36px;
+    width: 67px;
+    position: relative;
+    top: -10px;
+}
+
+ul.nav {
+    list-style-type: none;
+    margin-top: 79px;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+    opacity: 0.9;
+    border: 2px solid black;
+    height: 40px;
+  }
+  
+  li.nav {
+    float: left;
+  }
+  
+  li.nav a {
+    display: block;
+    color: #00fffe;
+    text-align: center;
+    padding: 11px 28px;
+    text-decoration: none;
+  }
+  
+  li.nav a:hover{
+    background-color: #5b1c82;
+    height: 22px;
+  }
+
+/* tempglass */
+body.temp{
+    background-image: url(bridgeim.jpg);
+    background-repeat: no-repeat;
+    background-size: auto 763px;
+    background-position: center 0px;
+
+}
+img.tg1{
+    position: absolute;
+    top: 14px; 
+    left: 909px; 
+    height: 62px; 
+    width: 65px;
+}
+img.tg2{
+    position: absolute;
+    top: 14px; 
+    left: 571px; 
+    height: 62px; 
+    width: 65px;
+}
+table.temp{
+    position: absolute;
+    top: 168px;
+    left: 705px;
+}
+h1.temp{
+    color: #5b1c82;
+    text-shadow: 2px 2px 5px red;
+    text-align: center;
+    display: inline;
+    margin: 0px;
+    position: fixed;
+    left: 648px;
+    top: 10px;
+    font-size: 50px;
+}
+h2.temp{
+    position: fixed;
+    text-shadow: 2px 2px 5px rgb(176, 0, 0);
+    left: 661px;
+    top: 66px;
+    color: blueviolet;
+    font-size: xx-large;
+}
+body.temp{
+    background-color:#0a0909;
+}
+button.temp{
+    height: 60px;
+    width: 60px;
+    font-size: xx-large;
+}
+button.entry{
+    height: 60px;
+    width: 123px;
+    font-size: xx-large;
+}
+img.home{
+    height: 40px;
+    width: 40px;
+    margin: auto;
+    position: fixed;
+    left: 15px;
+    top: 15px;
+}
+/* snl */
+h1.snl{
+    text-align: center;
+    display: inline;
+    margin: 0px;
+    font-size: 60px;
+    position: absolute;
+    left:536px;
+    top: 30px;
+    color: green;
+    text-shadow: 3px 3px 10px rgb(143, 238, 1);
+    z-index: 1;
+}
+body.snl{
+    background-color: rgb(255, 160, 27);
+    background-image:url(snlbg.jpg) ;
+    background-repeat: no-repeat;
+    background-size: 1536px 774px;
+    
+} 
+#board{
+    position: relative;
+    top: 112px;
+    left: 560px;
+    height: 400px;
+    width: 400px;
+}
+td.snl{
+    width: 63px;
+    height: 67px;
+}
+img.p{
+    height: 34px;
+    width: 18px;
+}
+img.snl{
+    height: 35px;
+    width: 20px;
+} 
+
+table.top{
+    position: absolute;
+    height: 400px;
+    width: 400px;
+    top: 121px;
+    left: 567px;
+}
+b.snl{
+    color: #0062ff;
+    position: absolute;
+    top: 610px;
+    left: 670px;
+    font-size: xx-large;
+}
+button.snl{
+    height: 55px;
+    width: 55px;
+    font-size: larger;
+    position: absolute;
+    top: 540px;
+    left: 738px;
+    font-weight: bolder;
+    font-size: xx-large;
+}
+#snl{
+    height: 121px;
+    width: 582px;
+    position: absolute;
+    top: -2px;
+    left: 510px;
+    z-index: 0;
+}
+
+/* wam */
+h1.wam{
+    text-align: center;
+    display: inline;
+    margin: 0px;
+    position: fixed;
+    left: 610px;
+    top: 0px;
+    font-size: 60px;
+    color: rgb(61, 61, 255);
+    color: rgb(255, 0, 0);
+    text-shadow: 3px 3px 10px rgb(183, 0, 255);
+}
+button.wam{
+    height: 70px;
+    width: 70px;
+    font-size: x-large;
+    background-image: url(wambgbutton.jpeg);
+    background-color: rgb(255, 255, 255);
+    cursor: grab;
+}
+div.wam{
+    position: absolute;
+    left: 624px;
+    top: 150px;
+}
+
+img.wam{
+    height: 50px;
+    width: 50px;
+    cursor: grab;
+}
+
+b.wam{
+    position: relative;
+    left: 122px;
+    top: 15px;
+    font-size: xx-large;
+}
+b#t{
+    position: absolute;
+    left: 718px;
+    top: 102px;
+    font-size: xx-large;
+}
+button.wstart{
+    position: relative;
+    top: -4px;
+    left: 164px;
+    background-color: rgb(136, 255, 0);
+}
+body.wam{
+    background-color: yellowgreen;
+    background-image: url(bgmole.jpg);
+    background-repeat: no-repeat;
+    background-size: 1536px 763px;
+}
+
+#sc{
+    left: 133px;
+}
+#char{
+    height: 50px;
+    width: 30px;
+}
